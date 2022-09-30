@@ -1,38 +1,41 @@
-const Sequelize = require('sequelize'); // importing Sequelize ORM
-const db = new Sequelize('postgres://localhost:5432/acme_cc'); // URL path to our db
+// const Sequelize = require('sequelize'); // importing Sequelize ORM
+// const db = new Sequelize('postgres://localhost:5432/acme_cc'); // URL path to our db
+const db = require("./db");
+const Booking = require("./booking");
+const Member = require("./member");
+const Facility = require("./facility");
 
+// const Booking = db.define('booking',{
+//     id: {
+//         type: Sequelize.UUID,
+//         defaultValue: Sequelize.UUIDV4,
+//         primaryKey: true,
+//     }
+// });
 
-const Booking = db.define('booking',{
-    id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        primaryKey: true,
-    }
-});
+// const Member = db.define('member',{
+//     id: {
+//         type: Sequelize.UUID,
+//         defaultValue: Sequelize.UUIDV4,
+//         primaryKey: true,
+//     },
+//     name:{
+//         type:Sequelize.STRING,
+//         allowNull:false
+//     }
+// });
 
-const Member = db.define('member',{
-    id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        primaryKey: true,
-    },
-    name:{
-        type:Sequelize.STRING,
-        allowNull:false
-    }
-});
-
-const Facility = db.define('facility',{
-    id: {
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4,
-        primaryKey: true,
-    },
-    name:{
-        type:Sequelize.STRING,
-        allowNull:false
-    } 
-});
+// const Facility = db.define('facility',{
+//     id: {
+//         type: Sequelize.UUID,
+//         defaultValue: Sequelize.UUIDV4,
+//         primaryKey: true,
+//     },
+//     name:{
+//         type:Sequelize.STRING,
+//         allowNull:false
+//     } 
+// });
 
 
 
